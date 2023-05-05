@@ -7,35 +7,31 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/tasks")
+
 public class TaskController {
 
-    @Autowired
-    private TaskService taskService;
 
-    @GetMapping
+
     public List<Task> findAll(){
-        return taskService.findAll();
+        return null;
     }
 
-    @GetMapping(value = "/{id}")
-    public Task findById(@PathVariable Long id){
-        return taskService.findById(id);
+
+    public Task findById( Long id){
+        return null;
     }
 
-    @PostMapping
-    public Task createTask(@RequestBody Task task){
-        return taskService.create(task);
+
+    public Task createTask( Task task){
+        return null;
     }
 
-    @PutMapping(value = "/{id}")
-    public Task modifyTask(@PathVariable Long id, @RequestBody Task task){
-        return taskService.modify(id, task);
+
+    public Task modifyTask( Long id,  Task task){
+        return null;
     }
 
     @DeleteMapping(value = "/{id}")
-    public void deleteProduct(@PathVariable Long id){
-        taskService.delete(id);
+    public void deleteProduct(Long id){
     }
 }
